@@ -37,7 +37,7 @@
 #pragma mark - FCChartViewDataSource
 
 - (NSInteger)chartView:(FCChartView *)chartView numberOfItemsInSection:(NSInteger)section{
-    return 300;
+    return 10;
 }
 
 - (__kindof UICollectionViewCell *)collectionViewCell:(UICollectionViewCell *)collectionViewCell collectionViewType:(FCChartCollectionViewType)type cellForItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -56,7 +56,7 @@
 
 
 - (NSInteger)numberOfSectionsInChartView:(FCChartView *)chartView{
-    return 300;
+    return 30;
 }
 
 - (NSInteger)numberOfSuspendSectionsInChartView:(FCChartView *)chartView{

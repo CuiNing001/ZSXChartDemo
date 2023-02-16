@@ -91,13 +91,13 @@ static NSInteger kMainCVTag = 19979754;
     }
     if (indexPath.row <self.suspendRow) {
         cell.backgroundColor = self.suspendRowColor;
-        NSIndexPath *indexP = [NSIndexPath indexPathForRow:indexPath.row inSection:indexPath.section-self.suspendSection];
-        cell = [self.dataSource collectionViewCell:cell collectionViewType:FCChartCollectionViewTypeSuspendRow cellForItemAtIndexPath:indexP];
+//        NSIndexPath *indexP = [NSIndexPath indexPathForRow:indexPath.row inSection:indexPath.section-self.suspendSection];
+        cell = [self.dataSource collectionViewCell:cell collectionViewType:FCChartCollectionViewTypeSuspendRow cellForItemAtIndexPath:indexPath];
         return cell;
     }
     cell.backgroundColor = self.mainColor;
-    NSIndexPath *indexP = [NSIndexPath indexPathForRow:indexPath.row-self.suspendRow inSection:indexPath.section-self.suspendSection];
-    cell = [self.dataSource collectionViewCell:cell collectionViewType:FCChartCollectionViewTypeMain cellForItemAtIndexPath:indexP];
+//    NSIndexPath *indexP = [NSIndexPath indexPathForRow:indexPath.row-self.suspendRow inSection:indexPath.section-self.suspendSection];
+    cell = [self.dataSource collectionViewCell:cell collectionViewType:FCChartCollectionViewTypeMain cellForItemAtIndexPath:indexPath];
     return cell;
 }
 
