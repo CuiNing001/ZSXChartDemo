@@ -114,7 +114,14 @@ static NSInteger kMainCVTag = 19979754;
 }
 
 #pragma mark - UICollectionViewDelegate
-
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    ///
+    if([_dataSource respondsToSelector:@selector(chartView: didSelectItemAtIndexPath:)])
+    {
+        [_dataSource chartView:self didSelectItemAtIndexPath:indexPath];
+    }
+}
 
 #pragma mark - Getter Methods
 

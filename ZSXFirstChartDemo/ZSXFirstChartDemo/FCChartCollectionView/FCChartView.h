@@ -63,7 +63,10 @@ typedef enum : NSUInteger {
  */
 - (NSInteger)chartView:(FCChartView *)chartView numberOfSuspendItemsInSection:(NSInteger)section;
 
-
+/**
+ * item点击事件
+ */
+- (void)chartView:(FCChartView *)chartView didSelectItemAtIndexPath:(NSIndexPath *)indexPath;
 @end
 
 
